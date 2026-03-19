@@ -1003,7 +1003,13 @@ with tab7:
                         st.session_state.X_features = X_features
                         st.session_state.tfidf_matrix = tfidf_matrix
                         st.session_state.feature_cols = feature_cols
-                        st.session_state.y_labels = df_train[label_col].values
+                        
+                        # Ensure labels are numeric (0 and 1)
+                        y_labels = df_train[label_col].values.astype(str).str.lower()
+                        # Convert string labels to numeric if needed
+                        label_mapping = {'genuine': 0, 'fake': 1, '0': 0, '1': 1}
+                        y_labels_numeric = np.array([label_mapping.get(str(val).lower(), int(val) if str(val).isdigit() else 0) for val in y_labels])
+                        st.session_state.y_labels = y_labels_numeric
                         st.session_state.df_train = df_train
                         
                         st.success("✅ Preprocessing completed!")
@@ -1018,27 +1024,44 @@ with tab7:
                         st.error("❌ Please complete preprocessing first!")
                     else:
                         with st.spinner("Training model..."):
-                            # Split data
-                            from sklearn.model_selection import train_test_split
-                            
-                            X_train, X_test, y_train, y_test = train_test_split(
-                                st.session_state.X_features,
-                                st.session_state.y_labels,
-                                test_size=test_size,
-                                random_state=42
-                            )
-                            
-                            # Train model
-                            model, metrics, predictions = model_training.train_and_evaluate(
-                                X_train, X_test, y_train, y_test, algorithm=algorithm
-                            )
-                            
-                            st.session_state.model = model
-                            st.session_state.model_metrics = metrics
-                            st.session_state.X_test = X_test
-                            st.session_state.y_test = y_test
-                            
-                            st.success("✅ Model trained successfully!")
+                            try:
+                                # Split data
+                                from sklearn.model_selection import train_test_split
+                                
+                                # Ensure y_labels are numeric and properly formatted
+                                y_labels = st.session_state.y_labels.astype(int)
+                                
+                                # Check if we have enough samples for splitting
+                                min_samples = max(2, int(len(y_labels) * test_size))
+                                if len(y_labels) < 4:
+                                    st.error(f"❌ Not enough data to split! Need at least 4 samples, got {len(y_labels)}")
+                                    st.stop()
+                                
+                                X_train, X_test, y_train, y_test = train_test_split(
+                                    st.session_state.X_features,
+                                    y_labels,
+                                    test_size=test_size,
+                                    random_state=42,
+                                    stratify=y_labels if len(np.unique(y_labels)) > 1 else None
+                                )
+                                
+                                # Train model
+                                model, metrics, predictions = model_training.train_and_evaluate(
+                                    X_train, X_test, y_train, y_test, algorithm=algorithm
+                                )
+                                
+                                st.session_state.model = model
+                                st.session_state.model_metrics = metrics
+                                st.session_state.X_test = X_test
+                                st.session_state.y_test = y_test
+                                
+                                st.success("✅ Model trained successfully!")
+                            except ValueError as e:
+                                st.error(f"❌ Error during training: {str(e)}")
+                                st.info("**Troubleshooting:**\n- Ensure label column contains 0/1 or 'genuine'/'fake'\n- Try with more samples\n- Check data preprocessing step")
+                            except Exception as e:
+                                st.error(f"❌ Unexpected error: {str(e)}")
+                                st.info("Please check your data and try again")
             
             st.markdown("---")
             
