@@ -1,0 +1,52 @@
+review_text,rating,product_id,review_date,label
+"This product is amazing! I love it so much, excellent quality and fast delivery.",5,P001,2023-01-15,0
+"Best purchase ever made, highly recommended to everyone!",5,P001,2023-01-16,1
+"Works as described, great value for money, very happy with purchase.",4,P002,2023-01-17,0
+"Not worth the price, disappointed with quality.",2,P003,2023-01-18,0
+"Good product, arrived quickly, meets expectations perfectly.",4,P004,2023-01-19,0
+"Absolutely terrible, waste of money, do not buy!",1,P005,2023-01-20,1
+"Average product, nothing special but does the job.",3,P006,2023-01-21,0
+"Excellent customer service and product quality, very satisfied.",5,P007,2023-01-22,0
+"Totally fake, ordered but never received, scam!",1,P008,2023-01-23,1
+"Perfect! Exactly what I needed, works great.",5,P009,2023-01-24,0
+"Got this yesterday and I'm in love with it already!",5,P010,2023-01-25,1
+"Poor quality, broke after one week of use.",1,P011,2023-01-26,0
+"Decent product, good price, would recommend.",4,P012,2023-01-27,0
+"Amazing quality, best in its class, five stars!",5,P013,2023-01-28,1
+"Defective product, seller refused replacement.",1,P014,2023-01-29,0
+"Impressed with durability and performance, happy buyer.",4,P015,2023-01-30,0
+"This is the worst product I've ever bought!",1,P016,2023-01-31,1
+"Exactly as pictured, great purchase experience.",5,P017,2023-02-01,0
+"Nice product but could be better for the price.",3,P018,2023-02-02,0
+"Fantastic! Exceeded my expectations completely.",5,P019,2023-02-03,0
+"Sad to say, this product failed expectations badly.",2,P020,2023-02-04,1
+"Good value, solid construction, very reliable.",4,P021,2023-02-05,0
+"Absolutely love it, can't recommend enough!",5,P022,2023-02-06,1
+"Returned item due to defects, poor quality control.",1,P023,2023-02-07,0
+"Great product for the price, very satisfied customer.",4,P024,2023-02-08,0
+"Not what I expected, misleading description.",2,P025,2023-02-09,0
+"Outstanding quality, will definitely buy again!",5,P026,2023-02-10,0
+"Too overpriced for what you get, not worth it.",2,P027,2023-02-11,1
+"Perfect fit and finish, excellent workmanship.",5,P028,2023-02-12,0
+"Broke within days of purchase, very disappointed.",1,P029,2023-02-13,0
+"Amazing item, super fast shipping, great seller!",5,P030,2023-02-14,1
+"Works well, no complaints so far.",4,P031,2023-02-15,0
+"Disaster! Product is completely useless.",1,P032,2023-02-16,1
+"Good quality for an affordable price, happy.",4,P033,2023-02-17,0
+"Exceptional product, exceeded all expectations.",5,P034,2023-02-18,0
+"Not satisfied with the quality or service.",2,P035,2023-02-19,0
+"Love this product, using it daily without issues.",4,P036,2023-02-20,0
+"Fantastic purchase, highly satisfied with results.",5,P037,2023-02-21,1
+"Defective from the start, avoid this product.",1,P038,2023-02-22,0
+"Good sturdy product, worth the money.",4,P039,2023-02-23,0
+"Perfect product, arrived on time, very happy!",5,P040,2023-02-24,0
+"Terrible quality, fell apart immediately.",1,P041,2023-02-25,1
+"Nice product, good quality, fair price.",4,P042,2023-02-26,0
+"Absolutely wonderful, best seller on the platform!",5,P043,2023-02-27,1
+"Poor construction, doesn't last long.",1,P044,2023-02-28,0
+"Great value product, works perfectly.",4,P045,2023-03-01,0
+"Amazing! This exceeded all my expectations!",5,P046,2023-03-02,0
+"Useless product, complete waste of money.",1,P047,2023-03-03,1
+"Good quality, reliable, would buy again.",4,P048,2023-03-04,0
+"Perfect! Everything is great with this product!",5,P049,2023-03-05,1
+"Horrible experience, bad quality and service.",1,P050,2023-03-06,0

@@ -1,0 +1,5 @@
+[server]
+# Allow larger uploaded CSV files (size in MB)
+maxUploadSize = 1024
+# Keep websocket message limit aligned with upload limit
+maxMessageSize = 1024

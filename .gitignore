@@ -1,0 +1,25 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Streamlit and local secrets
+.streamlit/secrets.toml
+
+# Build / tooling artifacts
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+
+# Local model/data outputs (keep source data folder structure)
+models/*.pkl
+models/*.joblib
