@@ -335,7 +335,16 @@ nltk.download('wordnet')
 
 ## 📄 License
 
-This project is open source and available for educational and research purposes.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+The MIT License is a permissive open-source license that allows you to:
+- ✅ Use for commercial and private purposes
+- ✅ Modify and distribute the code
+- ✅ Include it in proprietary applications
+
+**The only requirement is** to include the original license and copyright notice in any copies or substantial portions of the software.
+
+For more information about MIT License, visit [opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
 
 ## 🤝 Contributing
 
